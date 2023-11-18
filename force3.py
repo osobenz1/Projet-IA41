@@ -95,4 +95,14 @@ class Force3:
             return True, self.board[0][2]
 
         # Aucun gagnant encore
-        return False, None   
+        return False, None
+
+    def render(self):
+        # Définition des symboles pour chaque type de pion
+        symbols = {0: '.', 1: 'X', -1: 'O', 2: '#'}
+
+        # Afficher chaque ligne du plateau
+        for row in self.board:
+            print(' '.join(symbols[piece] for piece in row))
+
+        print()   
